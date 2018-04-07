@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- 
+<!--
   Theme Name: Enlight
   Theme URL: https://probootstrap.com/enlight-free-education-responsive-bootstrap-website-template
   Author: ProBootstrap.com
@@ -14,7 +14,7 @@
     <title>ProBootstrap:Enlight &mdash; Free Bootstrap Theme, Free Responsive Bootstrap Website Template</title>
     <meta name="description" content="Free Bootstrap Theme by ProBootstrap.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -33,10 +33,10 @@
         <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
       </form>
     </div>
-    
+
     <div class="probootstrap-page-wrapper">
       <!-- Fixed navbar -->
-      
+
       <div class="probootstrap-header-top">
         <div class="container">
           <div class="row">
@@ -97,7 +97,7 @@
                   <li><a href="news.html">News</a></li>
                 </ul>
               </li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a id = "login" href="#">Login</a></li>
             </ul>
           </div>
         </div>
@@ -126,7 +126,7 @@
                 </div>
               </div>
             </div>
-            
+
           </li>
           <li style="background-image: url(img/slider_3.jpg)" class="overlay">
             <div class="container">
@@ -141,7 +141,7 @@
           </li>
         </ul>
       </section>
-      
+
       <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
           <div class="row">
@@ -173,7 +173,7 @@
 
       <section class="probootstrap-section" id="probootstrap-counter">
         <div class="container">
-          
+
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
               <div class="probootstrap-counter-wrap">
@@ -216,7 +216,7 @@
               </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
-               
+
                <div class="probootstrap-counter-wrap">
                 <div class="probootstrap-icon">
                   <i class="icon-smile2"></i>
@@ -253,7 +253,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              
+
               <div class="tab-content">
 
                 <div id="featured-news" class="tab-pane fade in active">
@@ -267,7 +267,7 @@
                               <h3>Tempora consectetur unde nisi</h3>
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ut.</p>
                               <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                              
+
                             </div>
                           </a>
                         </div>
@@ -279,7 +279,7 @@
                               <h3>Tempora consectetur unde nisi</h3>
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
                               <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                              
+
                             </div>
                           </a>
                         </div>
@@ -291,7 +291,7 @@
                               <h3>Tempora consectetur unde nisi</h3>
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, dolores.</p>
                               <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                              
+
                             </div>
                           </a>
                         </div>
@@ -303,8 +303,8 @@
                               <h3>Tempora consectetur unde nisi</h3>
                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, earum.</p>
                               <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                              
-                              
+
+
                             </div>
                           </a>
                         </div>
@@ -315,7 +315,7 @@
                   <!-- END row -->
                   <div class="row">
                     <div class="col-md-12 text-center">
-                      <p><a href="#" class="btn btn-primary">View all news</a></p>  
+                      <p><a href="#" class="btn btn-primary">View all news</a></p>
                     </div>
                   </div>
                 </div>
@@ -372,13 +372,13 @@
                   </div>
                   <div class="row">
                     <div class="col-md-12 text-center">
-                      <p><a href="#" class="btn btn-primary">View all events</a></p>  
+                      <p><a href="#" class="btn btn-primary">View all events</a></p>
                     </div>
                   </div>
                 </div>
 
               </div>
-            
+
             </div>
           </div>
         </div>
@@ -458,8 +458,8 @@
         </div>
       </section>
 
-      
-      
+
+
       <section class="probootstrap-section">
         <div class="container">
           <div class="row">
@@ -582,7 +582,7 @@
                     <blockquote class="quote">&ldquo;I think design would be better if designers were much more skeptical about its applications. If you believe in the potency of your craft, where you choose to dole it out is not something to take lightly.&rdquo; <cite class="author">&mdash; <span>Brandon White</span></cite></blockquote>
                   </div>
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -605,7 +605,7 @@
                 <div class="text">
                   <h3>Consectetur Adipisicing</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
-                </div>  
+                </div>
               </div>
               <div class="service left-icon probootstrap-animate">
                 <div class="icon"><i class="icon-checkmark"></i></div>
@@ -628,9 +628,9 @@
                 <div class="text">
                   <h3>Laboriosam Quod Dignissimos</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
-                </div>  
+                </div>
               </div>
-              
+
               <div class="service left-icon probootstrap-animate">
                 <div class="icon"><i class="icon-checkmark"></i></div>
                 <div class="text">
@@ -638,7 +638,7 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
                 </div>
               </div>
-              
+
               <div class="service left-icon probootstrap-animate">
                 <div class="icon"><i class="icon-checkmark"></i></div>
                 <div class="text">
@@ -652,7 +652,7 @@
           <!-- END row -->
         </div>
       </section>
-      
+
       <section class="probootstrap-cta">
         <div class="container">
           <div class="row">
@@ -703,10 +703,10 @@
                 </ul>
               </div>
             </div>
-           
+
           </div>
           <!-- END row -->
-          
+
         </div>
 
         <div class="probootstrap-copyright">
@@ -725,7 +725,7 @@
 
     </div>
     <!-- END wrapper -->
-    
+
 
     <script src="js/scripts.min.js"></script>
     <script src="js/main.min.js"></script>
