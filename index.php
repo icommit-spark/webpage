@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="css/custom.css">
     <script src="js/scripts.min.js"></script>
     <script src="js/main.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/jquery.flexslider.min.js"></script> -->
     <script src="js/custom.js"></script>
     <script src="js/owl.carousel.js"></script>
     <link rel="stylesheet" href="css/custom.css">
