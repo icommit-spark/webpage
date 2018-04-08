@@ -3,14 +3,22 @@ jQuery(document).ready(function() {
 	"use strict";
 	// Your custom js code goes here.
     // After clicking on the login button (the id is login), open a modal for registration/signin
-    $("#login").leanModal({
-		top: 100,
-		overlay: 0.6,
-		closeButton: ".modal_close"
+
+    // $("#login-button-clicker").leanModal({
+	// 	top: 100,
+	// 	overlay: 0.6,
+	// 	closeButton: ".modal_close"
+    // });
+    // $('#modal').parent().on('show.bs.modal', function(e){ $(e.relatedTarget.attributes['data-target'].value).appendTo('body'); })
+
+    $('#login-button-clicker').click(function(e){
+        $('#modal').show();
     });
+    // });
     // On the press of the closeModal button, hide the modal
     $("#closeModal").click(function(e) {
         $("#modal").hide();
+        // window.open();
     });
     $('#login-form-link').click(function(e) {
 		$("#login-form").delay(100).fadeIn(100);

@@ -5,8 +5,8 @@
 <script src="https://andwecode.com/wp-content/uploads/2015/10/jquery.leanModal.min_.js"></script>
 <link rel="stylesheet" href="css/custom.css">
 <!-- Include the above in your HEAD tag -->
-<li><a id = "login" href="#modal">Login</a></li>
-<div id="modal" class="container" style=""> <!-- add display:none -->
+<li><a id = "login-button-clicker" href="#modal">Login</a></li>
+<div id="modal" class="container" style="display:none"> <!-- add display:none -->
     <header class="popupHeader">
 						<span class="modal_close"><i class="fa fa-times"></i></span>
 				</header>
