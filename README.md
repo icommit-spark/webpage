@@ -2,8 +2,7 @@
 
 Website for icommit
 
-Bootstrap
-http://getbootstrap.com/
+Credits-
 
 jQuery
 http://jquery.com/
