@@ -652,7 +652,7 @@
               <div class="probootstrap-footer-widget">
                 <h3>Links</h3>
                 <ul>
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="index.php">Home</a></li>
                   <li><a href="food.html">Food</a></li>
                   <li><a href="transportation.html">Transportation</a></li>
                   <li><a href="shopping.html">Shopping</a></li>
