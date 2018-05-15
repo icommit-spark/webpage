@@ -1,6 +1,7 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+
+<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
 
 <head>
     <meta charset="utf-8">
@@ -11,13 +12,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://andwecode.com/wp-content/uploads/2015/10/jquery.leanModal.min_.js"></script>
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <script src="js/scripts.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/moment.js"></script>
     <script src="js/owl.carousel.js"></script>
     <link rel="stylesheet" href="css/custom.css">
 </head>
@@ -94,9 +95,30 @@ $.get('database/getSessionData.php', function (data) {
         // update the username dynamically
         $('#usernameText').text('Welcome, ' + msg.username).append(' <small>('+msg.email_address+')</small>');
         // append different pledges to the page
-        $('#listPledges').append('<div class="panel-body"><div class="pull-left"><a href="#"><img class="media-object img-circle" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;"></a></div><h4><a href="#" style="text-decoration:none;"><strong id=usernameText>John Doe</strong></a> – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> 42 minutes ago</i></a></small></small></h4><hr><div class="post-content"><p id="completedPledges">Completed Pledges</p><hr><p id="incompletePledges">Incomplete Pledges.</p></div></div>');
+        var pledges = $.ajax({
+            url: "database/getPledges.php",
+            type: "POST",
+            data: {username: msg.username},
+            dataType: "json"
+        });
+        $('#listPledges').append('<div class="panel-body"><div class="pull-left"><a href="#"><img class="media-object img-circle" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;"></a></div><h4><a href="#" style="text-decoration:none;"><strong id=usernameText>' + msg.username + '</strong></a></h4><hr><div class="post-content"><p id="completedPledges">Completed Pledges:</p><hr><p id="incompletePledges">Incomplete Pledges:</p></div></div>');
+        pledges.done(function(pledge) {
+            $.each(pledge, function(index, value) {
+                if (value.status == 'False') {
+                    console.log();
+                    $('#incompletePledges').append('<ul>' + value.pledge + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + ' </i></a></small></small></ul>');
+                } else {
+                    $('#completedPledges').append('<ul>' + value.pledge + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small></ul>');
+                }
+                console.log(value.status);
+            });
+        });
+        pledges.fail(function(jqXHR, textStatus){
+            alert( "Request Failed: " + textStatus);
+        });
 
-        console.log(msg);
+
+        // console.log(msg);
     });
     request.fail(function(jqXHR, textStatus) {
       alert( "Request failed: " + textStatus );
