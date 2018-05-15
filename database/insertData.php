@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-
+session_start();
 # get the values from $_POST, if the value is set, set it to the variable, else set it to ''
 # mysql_real_escape_string - sanitize the input
 $username = isset($_POST['username']) ? mysqli_real_escape_string($conn, $_POST['username']) : '';
