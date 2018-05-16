@@ -44,16 +44,15 @@
                         <div class="media-body">
                             <hr>
                             <h3><strong>Bio</strong></h3>
-                            <textarea rows="7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel gravida metus, non ultrices sapien. Morbi odio metus, dapibus non nibh id amet.</textarea>
+                            <textarea id="bioText" rows="7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel gravida metus, non ultrices sapien. Morbi odio metus, dapibus non nibh id amet.</textarea>
+                            <button id="bioButton" type="button" class="btn btn-primary">Update</button>
                             <hr>
                             <h3><strong>Location</strong></h3>
-                            <p>Earth</p>
+                            <p id="location">Earth</p>
                             <hr>
                             <h3><strong>Gender</strong></h3>
-                            <p>Unknown</p>
+                            <p id="gender">Unknown</p>
                             <hr>
-                            <h3><strong>Birthday</strong></h3>
-                            <p>January 01 1901</p>
                         </div>
                     </div>
                 </div>
@@ -88,6 +87,7 @@
 </div>
 
 <script>
+
 // ajax call to get the session data
 var session;
 $.ajaxSetup({cache: false})
@@ -102,7 +102,25 @@ $.get('database/getSessionData.php', function (data) {
       data: {username : session.username},
       dataType: "json"
     });
+
     request.done(function(msg) {
+        //update the bio dynamically
+        $('#bioText').text(msg.bio);
+        $('#bioButton').on('click', function() {
+            bioVal = $('#bioText').val();
+            var updateBio = $.ajax({
+                url: "database/updateProfileData.php",
+                type: "POST",
+                data:{username: session.username, column:'bio', value:bioVal},
+                dataType: "json"
+            });
+            updateBio.done(function(updated) {
+                console.log(updated)
+            });
+            updateBio.fail(function(jqXHR, textStatus){
+                alert( "Request Failed: " + textStatus);
+            });
+        })
         // update the username dynamically
         $('#usernameText').text('Welcome, ' + msg.username).append(' <small>('+msg.email_address+')</small>');
         // append different pledges to the page
@@ -129,14 +147,17 @@ $.get('database/getSessionData.php', function (data) {
             $("input[type='checkbox']").on('click', function (e) {
                 var pledgeId = $(this).closest('tr').find('td:first').text();
                 if($(this).is(":checked")) {
+                    // set the status to Complete
                     var pledgeStatusChange = $(this).closest('tr').find('td:nth-child(4)').find('span:first').text(' Complete');
                     var statusBool = 'True';
                 } else {
-                    // var pledgeId = $(this).closest('tr').find('td:first').text();
+                    // set the status text to Incomplete
                     var pledgeStatusChange = $(this).closest('tr').find('td:nth-child(4)').find('span:first').text(' Incomplete');
                     var statusBool = 'False';
                 }
                 // change the status of the pledge to true or false in the database
+                // using the id of the pledge and the value of the pledge
+                // to-do dynamically change the "Time" to the updated one
                 var pledgeChangeAjax = $.ajax({
                         url: "database/changePledges.php",
                         type: "POST",
@@ -153,9 +174,6 @@ $.get('database/getSessionData.php', function (data) {
             alert( "Request Failed: " + textStatus);
         });
 
-
-
-        // console.log(msg);
     });
     request.fail(function(jqXHR, textStatus) {
       alert( "Request failed: " + textStatus );
