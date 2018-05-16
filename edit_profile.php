@@ -112,7 +112,6 @@ $.get('database/getSessionData.php', function (data) {
             data: {username: msg.username},
             dataType: "json"
         });
-        // $('#listPledges').append('<div class="panel-body"><div class="pull-left"><a href="#"><img class="media-object img-circle" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;"></a></div><h4><a href="#" style="text-decoration:none;"><strong id=usernameText>' + msg.username + '</strong></a></h4><hr><div class="post-content"><p id="completedPledges">Completed Pledges:</p><hr><p id="incompletePledges">Incomplete Pledges:</p></div></div>');
         pledges.done(function(pledge) {
             // populate the pledges from the table
             $.each(pledge, function(index, value) {
@@ -128,16 +127,26 @@ $.get('database/getSessionData.php', function (data) {
             $('#pledgesTable').DataTable();
 
             $("input[type='checkbox']").on('click', function (e) {
+                var pledgeId = $(this).closest('tr').find('td:first').text();
                 if($(this).is(":checked")) {
-                    var pledgeId = $(this).closest('tr').find('td:first').text();
                     var pledgeStatusChange = $(this).closest('tr').find('td:nth-child(4)').find('span:first').text(' Complete');
-                    // var pledgeStatusChange = $(this).closest('tr').find('td:nth-child(4)').text(this.checked ? "Hide" : "Show");
-
+                    var statusBool = 'True';
                 } else {
-                    var pledgeId = $(this).closest('tr').find('td:first').text();
+                    // var pledgeId = $(this).closest('tr').find('td:first').text();
                     var pledgeStatusChange = $(this).closest('tr').find('td:nth-child(4)').find('span:first').text(' Incomplete');
-                    console.log(pledgeStatusChange)
+                    var statusBool = 'False';
                 }
+                // change the status of the pledge to true or false in the database
+                var pledgeChangeAjax = $.ajax({
+                        url: "database/changePledges.php",
+                        type: "POST",
+                        data: {pledgeId: pledgeId, status: statusBool},
+                        dataType: "json"
+                });
+
+                pledgeChangeAjax.done(function(change){
+                    console.log(change);
+                });
             });
         });
         pledges.fail(function(jqXHR, textStatus){
