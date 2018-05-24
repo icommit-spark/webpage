@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iCommit</title>
-    
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -20,156 +20,15 @@
         <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
       </form>
     </div>
-    
+
     <div class="probootstrap-page-wrapper">
       <!-- Fixed navbar -->
-      
-      <div class="probootstrap-header-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
-              <span><i class="icon-location2"></i>Boston, MA, United States</span>
-              <span><i class="icon-phone2"></i>+1-123-456-7890</span>
-              <span><i class="icon-mail"></i>ebarneson@gmail.com</span>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
-              <ul>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li><a href="#"><i class="icon-youtube"></i></a></li>
-                <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="navbar navbar-default probootstrap-navbar">
-        <div class="container">
-          <div class="navbar-header">
-            <div class="btn-more js-btn-more visible-xs">
-              <a href="#"><i class="icon-dots-three-vertical "></i></a>
-            </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            
-          </div>
 
-          <div id="navbar-collapse" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="index.html"><b>Home</b>&emsp;&emsp;&emsp;</a></li>
-              <li><a href="food.html">Food&emsp;&emsp;&emsp;</a></li>
-              <li><a href="transportation.html">Transportation&emsp;&emsp;&emsp;</a></li>
-              <li><a href="shopping.html">Shopping&emsp;&emsp;&emsp;</a></li>
-              <li><a href="house.html">Around the House&emsp;&emsp;&emsp;</a></li>
-              <li><a href="politics.html">Politics&emsp;&emsp;&emsp;</a></li>    
-              <!--<li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="courses.html">Courses</a></li>
-                  <li><a href="course-single.html">Course Single</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li class="dropdown-submenu dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="news.html">News</a></li>
-                </ul>
-              </li>-->
-                <li><a href="contact.html">Contact&emsp;&emsp;&emsp;</a></li>
-                <li class="active"><a id = "login-button-clicker" href="#"><b>Login</b></a></li>
-                <div id="modal" class="container" style="display:none">
-                    <header class="popupHeader">
-                        <span class="modal_close"><i class="fa fa-times"></i></span>
-                    </header>
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="panel panel-login">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                				            <a href="#" class="active" id="login-form-link">Login</a>
-                                        </div>
-                                        <div class="col-xs-6">
-                				            <a href="#" id="register-form-link">Register</a>
-                                        </div>
-                                    </div>
-                				    <hr>
-                				</div>
-                				<div class="panel-body">
-                				    <div class="row">
-                				        <div class="col-lg-12">
-                				            <form id="login-form" action="database/insertData.php" method="post" role="form" style="display: block;">
-                								<div class="form-group">
-                								    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-                								</div>
-                								<div class="form-group">
-                								    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-                								</div>
-                								<!-- <div class="form-group text-center">
-                								    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                								    <label for="remember"> Remember Me</label>
-                								</div> -->
-                								<div class="form-group">
-                								    <div class="row">
-                								        <div class="col-sm-6 col-sm-offset-3">
-                								            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-                								        </div>
-                								    </div>
-                								</div>
-                								<div class="form-group">
-                								    <div class="row">
-                								        <div class="col-lg-12">
-                								            <div class="text-center">
-                												<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
-                								            </div>
-                								        </div>
-                								    </div>
-                								</div>
-                				            </form>
-                				            <form id="register-form" action="database/insertData.php" method="post" role="form" style="display: none;">
-                								<div class="form-group">
-                								    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-                								</div>
-                								<div class="form-group">
-                									<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-                                                </div>
-                								<div class="form-group">
-                                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-                								</div>
-                                                <div class="form-group">
-                                                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-                								</div>
-                								<div class="form-group">
-                                                    <div class="row">
-                										<div class="col-sm-6 col-sm-offset-3">
-                                                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
-                								        </div>
-                								    </div>
-                								</div>
-                				            </form>
-                                        <button type="button" id ="closeModal" class="btn btn-default" data-dismiss="modal">Close</button>
-                				    </div>
-                				</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <?php
+    include 'include/header.php';
+    include 'include/navbar.php'
+    ?>
+
 
       <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
@@ -207,7 +66,7 @@
                 <div class="probootstrap-featured-news-box">
                     <div class="probootstrap-text">
                         <h3><br> </h3>
-                        <p>Call state senators about issues you care about.</p>     
+                        <p>Call state senators about issues you care about.</p>
                         <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
@@ -229,7 +88,7 @@
                 <div class="probootstrap-featured-news-box">
                     <div class="probootstrap-text">
                         <h3><br> </h3>
-                        <p>Participate in a protest or a rally for a cause.</p>     
+                        <p>Participate in a protest or a rally for a cause.</p>
                         <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
@@ -254,7 +113,7 @@
                 <div class="probootstrap-featured-news-box">
                     <div class="probootstrap-text">
                         <h3><br> </h3>
-                        <p>Distribute flyers to raise awareness about society's issues.</p>     
+                        <p>Distribute flyers to raise awareness about society's issues.</p>
                         <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
@@ -276,7 +135,7 @@
                 <div class="probootstrap-featured-news-box">
                     <div class="probootstrap-text">
                         <h3><br> </h3>
-                        <p>Send a letter to a local politician and ask for tighter restrictions on carbon emissions.</p>     
+                        <p>Send a letter to a local politician and ask for tighter restrictions on carbon emissions.</p>
                         <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
@@ -298,7 +157,7 @@
         </div>
       </section>
 
-      
+
       <section class="probootstrap-section">
         <div class="container">
           <div class="row">
@@ -428,10 +287,10 @@
                 </ul>
               </div>
             </div>
-           
+
           </div>
           <!-- END row -->
-          
+
         </div>
 
         <div class="probootstrap-copyright">
@@ -450,7 +309,7 @@
 
     </div>
     <!-- END wrapper -->
-    
+
     <script src="js/scripts.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/custom.js"></script>
