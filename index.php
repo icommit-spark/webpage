@@ -19,6 +19,7 @@
     <script src="js/custom.js"></script>
     <script src="js/owl.carousel.js"></script>
     <link rel="stylesheet" href="css/custom.css">
+
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.min.js"></script>
       <script src="js/vendor/respond.min.js"></script>
@@ -36,152 +37,11 @@
     <div class="probootstrap-page-wrapper">
       <!-- Fixed navbar -->
 
-      <div class="probootstrap-header-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
-              <span><i class="icon-location2"></i>Boston, MA, United States</span>
-              <span><i class="icon-phone2"></i>+1-123-456-7890</span>
-              <span><i class="icon-mail"></i>ebarneson@gmail.com</span>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
-              <ul>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li><a href="#"><i class="icon-youtube"></i></a></li>
-                <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="navbar navbar-default probootstrap-navbar">
-        <div class="container">
-          <div class="navbar-header">
-            <div class="btn-more js-btn-more visible-xs">
-              <a href="#"><i class="icon-dots-three-vertical "></i></a>
-            </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+      <?php
+      include 'include/header.php';
+      include 'include/navbar.php';
+      ?>
 
-          </div>
-
-          <div id="navbar-collapse" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-center">
-              <li class="active"><a href="index.html">Home&emsp;&emsp;&emsp;&emsp;</a></li>
-              <li><a href="food.html">Food&emsp;&emsp;&emsp;&emsp;</a></li>
-              <li><a href="transportation.html">Transportation&emsp;&emsp;&emsp;&emsp;</a></li>
-              <li><a href="shopping.html">Shopping&emsp;&emsp;&emsp;&emsp;</a></li>
-              <li><a href="house.html">Around the House&emsp;&emsp;&emsp;&emsp;</a></li>
-              <li><a href="politics.html">Politics&emsp;&emsp;&emsp;&emsp;</a></li>
-              <!--<li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="courses.html">Courses</a></li>
-                  <li><a href="course-single.html">Course Single</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li class="dropdown-submenu dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="news.html">News</a></li>
-                </ul>
-              </li>-->
-                <li class="active"><a href="contact.html"><b>Contact</b></a></li>
-                <li><a class = "active" id = "login-button-clicker" href="#">Login</a></li>
-                <div id="modal" class="container" style="display:none"> <!-- add display:none -->
-                    <header class="popupHeader">
-                						<span class="modal_close"><i class="fa fa-times"></i></span>
-                				</header>
-                    	<div class="row">
-                			<div class="col-md-6 col-md-offset-3">
-                				<div class="panel panel-login">
-                					<div class="panel-heading">
-                						<div class="row">
-                							<div class="col-xs-6">
-                								<a href="#" class="active" id="login-form-link">Login</a>
-                							</div>
-                							<div class="col-xs-6">
-                								<a href="#" id="register-form-link">Register</a>
-                							</div>
-                						</div>
-                						<hr>
-                					</div>
-                					<div class="panel-body">
-                						<div class="row">
-                							<div class="col-lg-12">
-                								<form id="login-form" action="database/insertData.php" method="post" role="form" style="display: block;">
-                									<div class="form-group">
-                										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-                									</div>
-                									<div class="form-group">
-                										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-                									</div>
-                									<!-- <div class="form-group text-center">
-                										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                										<label for="remember"> Remember Me</label>
-                									</div> -->
-                									<div class="form-group">
-                										<div class="row">
-                											<div class="col-sm-6 col-sm-offset-3">
-                												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
-                											</div>
-                										</div>
-                									</div>
-                									<div class="form-group">
-                										<div class="row">
-                											<div class="col-lg-12">
-                												<div class="text-center">
-                													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
-                												</div>
-                											</div>
-                										</div>
-                									</div>
-                								</form>
-                								<form id="register-form" action="database/insertData.php" method="post" role="form" style="display: none;">
-                									<div class="form-group">
-                										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
-                									</div>
-                									<div class="form-group">
-                										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-                									</div>
-                									<div class="form-group">
-                										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-                									</div>
-                									<div class="form-group">
-                										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-                									</div>
-                									<div class="form-group">
-                										<div class="row">
-                											<div class="col-sm-6 col-sm-offset-3">
-                												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
-                											</div>
-                										</div>
-                									</div>
-                								</form>
-                                                <button type="button" id ="closeModal" class="btn btn-default" data-dismiss="modal">Close</button>
-                							</div>
-                						</div>
-                					</div>
-                				</div>
-                			</div>
-                		</div>
-                	</div>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
       <section class="flexslider">
         <ul class="slides">
@@ -189,7 +49,8 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                  <div class="probootstrap-slider-text text-center">
+
+                 <div class="probootstrap-slider-text text-center">
                     <h1 class="probootstrap-heading probootstrap-animate">Giving Back to the Society</h1>
                   </div>
                 </div>
@@ -255,7 +116,7 @@
         <div class="container">
 
           <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+            <div style="margin-left: 80px" class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
               <div class="probootstrap-counter-wrap">
                 <div class="probootstrap-icon">
                   <i class="icon-users2"></i>
@@ -282,7 +143,7 @@
               </div>
             </div>-->
             <div class="clearfix visible-sm-block visible-xs-block"></div>
-            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+            <div style="margin-left: 120px" class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
               <div class="probootstrap-counter-wrap">
                 <div class="probootstrap-icon">
                   <i class="icon-library"></i>
@@ -295,7 +156,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+            <div style="margin-left: 80px" class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
 
                <div class="probootstrap-counter-wrap">
                 <div class="probootstrap-icon">
@@ -329,7 +190,7 @@
         </div>
       </section>
 
-      <section class="probootstrap-section probootstrap-section">
+      <section style="margin-bottom: 0px" class="probootstrap-section probootstrap-section">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -398,44 +259,46 @@
                       <div class="owl-carousel" id="owl2">
                         <div class="item">
                           <a href="#" class="probootstrap-featured-news-box">
-                            <figure class="probootstrap-media"><img src="img/img_sm_3.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+
                             <div class="probootstrap-text">
-                              <h3>Tempora consectetur unde nisi</h3>
-                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                              <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                              <h3><br></h3>
+                              <p>Take shorter showers to reduce water use. This will lower your water and heating bills too.</p>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>Around the House</span>
+
                             </div>
                           </a>
                         </div>
                         <!-- END item -->
                         <div class="item">
                           <a href="#" class="probootstrap-featured-news-box">
-                            <figure class="probootstrap-media"><img src="img/img_sm_1.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
                             <div class="probootstrap-text">
-                              <h3>Tempora consectetur unde nisi</h3>
-                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                              <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                              <h3><br></h3>
+                                <p>When possible, buy meat from local sources.</p>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>Food</span>
+
                             </div>
                           </a>
                         </div>
                         <!-- END item -->
                         <div class="item">
                           <a href="#" class="probootstrap-featured-news-box">
-                            <figure class="probootstrap-media"><img src="img/img_sm_2.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
+
                             <div class="probootstrap-text">
-                              <h3>Tempora consectetur unde nisi</h3>
-                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                              <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                              <h3><br></h3>
+                              <p>Go to a meaningful protest or rally.</p>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>Politics</span>
+
                             </div>
                           </a>
                         </div>
                         <!-- END item -->
                         <div class="item">
                           <a href="#" class="probootstrap-featured-news-box">
-                            <figure class="probootstrap-media"><img src="img/img_sm_3.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></figure>
                             <div class="probootstrap-text">
-                              <h3>Tempora consectetur unde nisi</h3>
-                              <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
-                              <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                              <h3><br></h3>
+                              <p>Carpool one a week.</p>
+                              <span class="probootstrap-date"><i class="icon-calendar"></i>Transportation</span>
+
                             </div>
                           </a>
                         </div>
@@ -443,11 +306,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="row">
+                  <!--<div class="row">
                     <div class="col-md-12 text-center">
                       <p><a href="#" class="btn btn-primary">View all events</a></p>
                     </div>
-                  </div>
+                  </div>-->
                 </div>
 
               </div>
@@ -456,7 +319,7 @@
           </div>
         </div>
       </section>
-
+<!--
       <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
         <div class="container">
           <div class="row">
@@ -465,7 +328,7 @@
               <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
             </div>
           </div>
-          <!-- END row -->
+
           <div class="row">
             <div class="col-md-6">
               <div class="probootstrap-service-2 probootstrap-animate">
@@ -529,16 +392,13 @@
             </div>
           </div>
         </div>
-      </section>
-
-
-
+      </section>-->
       <section class="probootstrap-section">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Meet Our Qualified Teachers</h2>
-              <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+            <div style="margin-top: 0px" class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Meet Our Top Contributors</h2>
+              <p class="lead">Get a chance to be featured here as one of the top contributors!</p>
             </div>
           </div>
           <!-- END row -->
@@ -547,16 +407,15 @@
             <div class="col-md-3 col-sm-6">
               <div class="probootstrap-teacher text-center probootstrap-animate">
                 <figure class="media">
-                  <img src="img/person_1.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
+                  <img src="img/person_4.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
                 </figure>
                 <div class="text">
-                  <h3>Chris Worth</h3>
-                  <p>Physical Education</p>
+                  <h3>Joey</h3>
+                  <p>Boston, MA</p>
                   <ul class="probootstrap-footer-social">
                     <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
                     <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
                     <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -567,13 +426,12 @@
                   <img src="img/person_5.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
                 </figure>
                 <div class="text">
-                  <h3>Janet Morris</h3>
-                  <p>English Teacher</p>
+                  <h3>Chandler</h3>
+                  <p>Chicago, IL</p>
                   <ul class="probootstrap-footer-social">
                     <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
                     <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
                     <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -585,13 +443,12 @@
                   <img src="img/person_6.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
                 </figure>
                 <div class="text">
-                  <h3>Linda Reyez</h3>
-                  <p>Math Teacher</p>
+                  <h3>Phoebe</h3>
+                  <p>Los Angeles, CA</p>
                   <ul class="probootstrap-footer-social">
                     <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
                     <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
                     <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -602,13 +459,12 @@
                   <img src="img/person_7.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
                 </figure>
                 <div class="text">
-                  <h3>Jessa Sy</h3>
-                  <p>Physics Teacher</p>
+                  <h3>Jessica</h3>
+                  <p>Seattle, WA</p>
                   <ul class="probootstrap-footer-social">
                     <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
                     <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
                     <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                    <li class="google-plus"><a href="#"><i class="icon-google-plus"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -621,8 +477,8 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Alumni Testimonial</h2>
-              <p class="lead">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+              <h2>Everyday Motivation</h2>
+              <p class="lead">Thoughts of People you May Know</p>
             </div>
           </div>
           <!-- END row -->
@@ -633,26 +489,66 @@
 
                   <div class="probootstrap-testimony-wrap text-center">
                     <figure>
-                      <img src="img/person_1.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
+                      <img src="img/kennedy.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
                     </figure>
-                    <blockquote class="quote">&ldquo;Design must be functional and functionality must be translated into visual aesthetics, without any reliance on gimmicks that have to be explained.&rdquo; <cite class="author"> &mdash; <span>Mike Fisher</span></cite></blockquote>
+                    <blockquote class="quote">&ldquo;The supreme reality of our time is ... the vulnerability of our planet.&rdquo; <cite class="author"> &mdash; <span>John F. Kennedy</span></cite></blockquote>
                   </div>
 
                 </div>
                 <div class="item">
                   <div class="probootstrap-testimony-wrap text-center">
                     <figure>
-                      <img src="img/person_2.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
+                      <img src="img/einstein.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
                     </figure>
-                    <blockquote class="quote">&ldquo;Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while.&rdquo; <cite class="author"> &mdash;<span>Jorge Smith</span></cite></blockquote>
+                    <blockquote class="quote">&ldquo;Problems cannot be solved at the same level of awareness that created them.&rdquo; <cite class="author"> &mdash;<span>Albert Einstein</span></cite></blockquote>
                   </div>
                 </div>
                 <div class="item">
                   <div class="probootstrap-testimony-wrap text-center">
                     <figure>
-                      <img src="img/person_3.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
+                      <img src="img/mills.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
                     </figure>
-                    <blockquote class="quote">&ldquo;I think design would be better if designers were much more skeptical about its applications. If you believe in the potency of your craft, where you choose to dole it out is not something to take lightly.&rdquo; <cite class="author">&mdash; <span>Brandon White</span></cite></blockquote>
+                    <blockquote class="quote">&ldquo;The sun is the only safe nuclear reactor, situated as it is some ninety-three million miles away.&rdquo; <cite class="author">&mdash; <span>Stephanie Mills</span></cite></blockquote>
+                  </div>
+                </div>
+                  <div class="item">
+                  <div class="probootstrap-testimony-wrap text-center">
+                    <figure>
+                      <img src="img/david.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
+                    </figure>
+                    <blockquote class="quote">&ldquo;What is the use of a house if you don't have a decent planet to put it on?.&rdquo; <cite class="author">&mdash; <span>Henry David Thoreau</span></cite></blockquote>
+                  </div>
+                </div>
+                  <div class="item">
+                  <div class="probootstrap-testimony-wrap text-center">
+                    <figure>
+                      <img src="img/fox.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
+                    </figure>
+                    <blockquote class="quote">&ldquo;A person who cares about the earth will resonate with its purity.&rdquo; <cite class="author">&mdash; <span>Sally Fox</span></cite></blockquote>
+                  </div>
+                </div>
+                  <div class="item">
+                  <div class="probootstrap-testimony-wrap text-center">
+                    <figure>
+                      <img src="img/franklin.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
+                    </figure>
+                    <blockquote class="quote">&ldquo;A nation that destroys its soils destroys itself. Forests are the lungs of our land, purifying the air and giving fresh strength to our people.&rdquo; <cite class="author">&mdash; <span>Franklin D. Roosevelt</span></cite></blockquote>
+                  </div>
+                </div>
+                  <div class="item">
+                  <div class="probootstrap-testimony-wrap text-center">
+                    <figure>
+                      <img src="img/robert.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
+                    </figure>
+                    <blockquote class="quote">&ldquo;There's so much pollution in the air now that if it weren't for our lungs, there'd be no place to put it all.&rdquo; <cite class="author">&mdash; <span>Robert Orben</span></cite></blockquote>
+                  </div>
+                </div>
+                  <div class="item">
+                  <div class="probootstrap-testimony-wrap text-center">
+                    <figure>
+                      <img src="img/edison.jpg" alt="Free Bootstrap Template by ProBootstrap.com">
+                    </figure>
+                    <blockquote class="quote">&ldquo;The doctor of the future will give no medication, but will interest his patients in the case of the human frame, diet and in the cause and prevention of disease.&rdquo; <cite class="author">&mdash; <span>Thomas Edison</span></cite></blockquote>
                   </div>
                 </div>
 
@@ -756,7 +652,7 @@
               <div class="probootstrap-footer-widget">
                 <h3>Links</h3>
                 <ul>
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="index.php">Home</a></li>
                   <li><a href="food.html">Food</a></li>
                   <li><a href="transportation.html">Transportation</a></li>
                   <li><a href="shopping.html">Shopping</a></li>
@@ -797,6 +693,11 @@
 
     </div>
     <!-- END wrapper -->
+
+
+    <script src="js/scripts.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/custom.js"></script>
 
   </body>
 </html>
