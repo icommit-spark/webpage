@@ -1,7 +1,8 @@
 <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
 
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<script src="js/vendor/jquery.min.js"></script>
 
 <head>
     <meta charset="utf-8">
@@ -48,10 +49,12 @@
                             <button id="bioButton" type="button" class="btn btn-primary">Update</button>
                             <hr>
                             <h3><strong>Location</strong></h3>
-                            <p id="location">Earth</p>
+                            <input type="text" id="locationText" value="">
+                            <button id="locationButton" type="button" class="btn btn-primary">Update</button>
                             <hr>
                             <h3><strong>Gender</strong></h3>
-                            <p id="gender">Unknown</p>
+                            <input type="text" id="genderText" value="">
+                            <button id="genderButton" type="button" class="btn btn-primary">Update</button>
                             <hr>
                         </div>
                     </div>
@@ -106,6 +109,9 @@ $.get('database/getSessionData.php', function (data) {
     request.done(function(msg) {
         //update the bio dynamically
         $('#bioText').text(msg.bio);
+        $('#locationText').val(msg.location);
+        $('#genderText').val(msg.gender);
+        // update the bio after submitting
         $('#bioButton').on('click', function() {
             bioVal = $('#bioText').val();
             var updateBio = $.ajax({
@@ -120,7 +126,42 @@ $.get('database/getSessionData.php', function (data) {
             updateBio.fail(function(jqXHR, textStatus){
                 alert( "Request Failed: " + textStatus);
             });
-        })
+        });
+
+        // update the location after submitting
+        $('#locationButton').on('click', function() {
+            locationVal = $('#locationText').val();
+            var updateBio = $.ajax({
+                url: "database/updateProfileData.php",
+                type: "POST",
+                data:{username: session.username, column:'location', value:locationVal},
+                dataType: "json"
+            });
+            updateBio.done(function(updated) {
+                console.log(updated)
+            });
+            updateBio.fail(function(jqXHR, textStatus){
+                alert( "Request Failed: " + textStatus);
+            });
+        });
+
+        // update the gender after submitting
+        $('#genderButton').on('click', function() {
+            genderVal = $('#genderText').val();
+            var updateBio = $.ajax({
+                url: "database/updateProfileData.php",
+                type: "POST",
+                data:{username: session.username, column:'gender', value:genderVal},
+                dataType: "json"
+            });
+            updateBio.done(function(updated) {
+                console.log(updated)
+            });
+            updateBio.fail(function(jqXHR, textStatus){
+                alert( "Request Failed: " + textStatus);
+            });
+        });
+
         // update the username dynamically
         $('#usernameText').text('Welcome, ' + msg.username).append(' <small>('+msg.email_address+')</small>');
         // append different pledges to the page
