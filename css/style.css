@@ -515,7 +515,6 @@ a:hover, a:focus, a:active {
 }
 
 .probootstrap-navbar .navbar-nav > li.active > a {
-  /* padding-right: 10px !important; */
   background: none !important;
   color: #49D292 !important;
   padding-right: 25px;
@@ -957,6 +956,7 @@ a:hover, a:focus, a:active {
 .probootstrap-section {
   padding: 7em 0;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .probootstrap-section.probootstrap-section-sm {
