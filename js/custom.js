@@ -34,7 +34,12 @@ jQuery(document).ready(function() {
 		$(this).addClass('active');
 		e.preventDefault();
 	});
-
+    
+    // for adding commits
+    $('.iCommit').on('click', function() {
+        var commitment = $(this).parent().prev().text();
+        console.log(commitment);
+    });
 
     // for profile page
 

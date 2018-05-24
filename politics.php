@@ -26,6 +26,8 @@
 
     <?php
     $current = 'politics';
+    session_start();
+    var_dump($_SESSION);
     include 'include/header.php';
     include 'include/navbar.php'
     ?>
@@ -67,7 +69,7 @@
                     <div class="probootstrap-text">
                         <h3><br> </h3>
                         <p>Call state senators about issues you care about.</p>
-                        <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
               </div>
@@ -77,7 +79,7 @@
                     <div class="probootstrap-text">
                         <h3><br> </h3>
                         <p>Call representatives about issues you care about.</p>
-                        <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
               </div>
@@ -89,7 +91,7 @@
                     <div class="probootstrap-text">
                         <h3><br> </h3>
                         <p>Participate in a protest or a rally for a cause.</p>
-                        <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
               </div>
@@ -99,7 +101,7 @@
                     <div class="probootstrap-text">
                         <h3><br> </h3>
                         <p>Convince people to vote for an honest and a just politician/law.</p>
-                        <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
               </div>
@@ -114,7 +116,7 @@
                     <div class="probootstrap-text">
                         <h3><br> </h3>
                         <p>Distribute flyers to raise awareness about society's issues.</p>
-                        <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
               </div>
@@ -124,7 +126,7 @@
                     <div class="probootstrap-text">
                         <h3><br> </h3>
                         <p>Participate in school/local elections and raise concerns.</p>
-                        <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
               </div>
@@ -136,7 +138,7 @@
                     <div class="probootstrap-text">
                         <h3><br> </h3>
                         <p>Send a letter to a local politician and ask for tighter restrictions on carbon emissions.</p>
-                        <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
               </div>
@@ -146,7 +148,7 @@
                     <div class="probootstrap-text">
                         <h3><br> </h3>
                         <p>Engage in friendly conversations with people who have different opinions about issues in the society.</p>
-                        <p><a href="#" class="btn btn-primary">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
                     </div>
                 </div>
               </div>
