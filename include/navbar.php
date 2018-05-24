@@ -16,12 +16,12 @@
     <div id="navbar-collapse" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-center">
         <li class="active"><a href="index.php">Home&emsp;&emsp;&emsp;&emsp;</a></li>
-        <li><a href="food.html">Food&emsp;&emsp;&emsp;&emsp;</a></li>
-        <li><a href="transportation.html">Transportation&emsp;&emsp;&emsp;&emsp;</a></li>
-        <li><a href="shopping.html">Shopping&emsp;&emsp;&emsp;&emsp;</a></li>
-        <li><a href="house.html">Around the House&emsp;&emsp;&emsp;&emsp;</a></li>
-        <li><a href="politics.html">Politics&emsp;&emsp;&emsp;&emsp;</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="food.php">Food&emsp;&emsp;&emsp;&emsp;</a></li>
+        <li><a href="transportation.php">Transportation&emsp;&emsp;&emsp;&emsp;</a></li>
+        <li><a href="shopping.php">Shopping&emsp;&emsp;&emsp;&emsp;</a></li>
+        <li><a href="house.php">Around the House&emsp;&emsp;&emsp;&emsp;</a></li>
+        <li><a href="politics.php">Politics&emsp;&emsp;&emsp;&emsp;</a></li>
+        <li><a href="contact.php">Contact</a></li>
           <li><a class = "active" id = "login-button-clicker" href="#">Login</a></li>
           <div id="modal" class="container" style="display:none">
               <header class="popupHeader">
