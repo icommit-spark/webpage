@@ -25,6 +25,7 @@
       <!-- Fixed navbar -->
 
     <?php
+    $current = 'shopping';
     include 'include/header.php';
     include 'include/navbar.php'
     ?>

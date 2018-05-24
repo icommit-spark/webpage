@@ -25,6 +25,7 @@
       <!-- Fixed navbar -->
 
     <?php
+    $current = 'politics';
     include 'include/header.php';
     include 'include/navbar.php'
     ?>

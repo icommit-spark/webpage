@@ -7,7 +7,7 @@
     <title>iCommit</title>
     <meta name="description" content="Free Bootstrap Theme by ProBootstrap.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -26,79 +26,16 @@
         <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
       </form>
     </div>
-    
+
     <div class="probootstrap-page-wrapper">
       <!-- Fixed navbar -->
-      
-      <div class="probootstrap-header-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
-              <span><i class="icon-location2"></i>Boston, MA, United States</span>
-              <span><i class="icon-phone2"></i>+1-123-456-7890</span>
-              <span><i class="icon-mail"></i>ebarneson@gmail.com</span>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
-              <ul>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                <li><a href="#"><i class="icon-instagram2"></i></a></li>
-                <li><a href="#"><i class="icon-youtube"></i></a></li>
-                <li><a href="#" class="probootstrap-search-icon js-probootstrap-search"><i class="icon-search"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="navbar navbar-default probootstrap-navbar">
-        <div class="container">
-          <div class="navbar-header">
-            <div class="btn-more js-btn-more visible-xs">
-              <a href="#"><i class="icon-dots-three-vertical "></i></a>
-            </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            
-          </div>
 
-          <div id="navbar-collapse" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="index.html"><b>Home</b>&emsp;&emsp;&emsp;</a></li>
-              <li><a href="#">Food&emsp;&emsp;&emsp;</a></li>
-              <li><a href="#">Transportation&emsp;&emsp;&emsp;</a></li>
-              <li><a href="#">Shopping&emsp;&emsp;&emsp;</a></li>
-              <li><a href="#">Around the House&emsp;&emsp;&emsp;</a></li>
-              <li><a href="#">Politics&emsp;&emsp;&emsp;</a></li>    
-              <!--<li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
-                <ul class="dropdown-menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="courses.html">Courses</a></li>
-                  <li><a href="course-single.html">Course Single</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li class="dropdown-submenu dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                      <li><a href="#">Second Level Menu</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="news.html">News</a></li>
-                </ul>
-              </li>-->
-                <li><a href="contact.html">Contact&emsp;&emsp;&emsp;</a></li>
-                <li class="active"><a id = "login" href="#"><b>Login</b></a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      
+    <?php
+    $current = 'contact';
+    include 'include/header.php';
+    include 'include/navbar.php';
+    ?>
+
       <section class="probootstrap-section probootstrap-section-colored">
         <div class="container">
           <div class="row">
@@ -109,7 +46,7 @@
         </div>
       </section>
 
-      
+
 
       <section class="probootstrap-section probootstrap-section-sm">
         <div class="container">
@@ -120,7 +57,7 @@
                   <div class="probootstrap-sidebar-inner probootstrap-overlap probootstrap-animate">
                     <h3>Pages</h3>
                     <ul class="probootstrap-side-menu">
-                      
+
                       <li><a href="index.html">Home</a></li>
                       <li><a href="#">Food</a></li>
                       <li><a href="#">Transportation</a></li>
@@ -161,7 +98,7 @@
           </div>
         </div>
       </section>
-      
+
       <section class="probootstrap-cta">
         <div class="container">
           <div class="row">
@@ -211,10 +148,10 @@
                 </ul>
               </div>
             </div>
-           
+
           </div>
           <!-- END row -->
-          
+
         </div>
 
         <div class="probootstrap-copyright">
@@ -233,7 +170,7 @@
 
     </div>
     <!-- END wrapper -->
-    
+
 
     <script src="js/scripts.min.js"></script>
     <script src="js/main.min.js"></script>

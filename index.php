@@ -38,6 +38,7 @@
       <!-- Fixed navbar -->
 
       <?php
+      $current = 'index';
       include 'include/header.php';
       include 'include/navbar.php';
       ?>

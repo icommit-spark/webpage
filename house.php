@@ -24,6 +24,7 @@
     <div class="probootstrap-page-wrapper">
       <!-- Fixed navbar -->
     <?php
+    $current = 'house';
     include 'include/header.php';
     include 'include/navbar.php'
     ?>
