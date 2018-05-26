@@ -26,8 +26,6 @@
 
     <?php
     $current = 'politics';
-    session_start();
-    var_dump($_SESSION);
     include 'include/header.php';
     include 'include/navbar.php'
     ?>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <nav class="navbar navbar-default probootstrap-navbar">
   <div class="container">
     <div class="navbar-header">
@@ -20,9 +23,33 @@
         <li class=<?php if($current =='transportation'){echo 'active';}?>><a href="transportation.php">Transportation&emsp;&emsp;&emsp;</a></li>
         <li class=<?php if($current =='shopping'){echo 'active';}?>><a href="shopping.php">Shopping&emsp;&emsp;&emsp;</a></li>
         <li class=<?php if($current =='house'){echo 'active';}?>><a href="house.php">Around the House&emsp;&emsp;&emsp;</a></li>
-        <li class=<?php if($current =='politics'){echo 'active';}?>><a href="politics.php">Politics&emsp;&emsp;&emsp;</a></li>
+        <li class=<?php if($current =='politics'){echo 'active ';}?>><a href="politics.php">Politics&emsp;&emsp;&emsp;</a></li>
         <li class=<?php if($current =='contact'){echo 'active';}?>><a href="contact.php">Contact</a></li>
-          <li><a class = "" id = "login-button-clicker" href="#">Login</a></li>
+        <li class=
+            "<?php
+                $classValue = '';
+                if (isset($_SESSION['username']))
+                {
+                    $classValue .= "show";
+                } else {
+                    echo 'hidden';
+                }
+                if ($current == 'profile') {
+                    $classValue .= ' active';
+                }
+                print $classValue;
+            ?>"
+        >
+        <a href="profile.php">Profile&emsp;&emsp;&emsp;</a></li>
+          <li><a class=
+              <?php
+              if (isset($_SESSION['username'])) {
+                  $value='hidden';
+              } else {
+                  $value='show';
+              }
+              echo $value;
+              ?> id = "login-button-clicker" href="#">Login</a></li>
           <div id="modal" class="container" style="display:none">
               <header class="popupHeader">
                                   <span class="modal_close"><i class="fa fa-times"></i></span>

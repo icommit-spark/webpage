@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
 <div class="mainbody container-fluid">
     <?php
-    session_start();
+    $current = 'profile';
     include 'include/header.php';
     include 'include/navbar.php';
     ?>

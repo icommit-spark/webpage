@@ -28,7 +28,7 @@ if ($email != '') {
     if (count($row) == 1) {
         $_SESSION['username'] = $username;
         $_SESSION['email_address'] = $row['email_address'];
-        header('Location: ../index.php?username='."$username");
+        header('Location: ../profile.php');
     } else {
         header('Location: ../index.php?error=invalidCredentials');
     }
