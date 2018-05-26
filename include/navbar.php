@@ -41,6 +41,36 @@ session_start();
             ?>"
         >
         <a href="profile.php">Profile&emsp;&emsp;&emsp;</a></li>
+        <li class=
+            "<?php
+                $classValue = '';
+                if (isset($_SESSION['username']))
+                {
+                    $classValue .= "show";
+                } else {
+                    echo 'hidden';
+                }
+                if ($current == 'edit_profile') {
+                    $classValue .= ' active';
+                }
+                print $classValue;
+            ?>"
+        >
+        <a href="edit_profile.php">Edit Profile&emsp;&emsp;&emsp;</a></li>
+        <li class=
+            "<?php
+                $classValue = '';
+                if (isset($_SESSION['username']))
+                {
+                    $classValue .= "show";
+                } else {
+                    echo 'hidden';
+                }
+                print $classValue;
+            ?>"
+        >
+        <a href="logout.php">Logout&emsp;&emsp;&emsp;</a></li>
+
           <li><a class=
               <?php
               if (isset($_SESSION['username'])) {

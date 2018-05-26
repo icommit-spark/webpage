@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iCommit</title>
 
-    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -49,9 +49,9 @@
                   <h3>Politics</h3>
                   <p>The Founders of our great nation believed that the main purpose of government was to protect people's basic rights. Almost all citizens have the right to participate in governing our nation. They may choose among many different ways of doing this. Some ways to participate are listed below. Let us strive together for a better future of our nation and our fellow countrymen.</p>
                 </div>
-                <!-- <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.jpg)">
+                <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.jpg)">
                     <iframe width="763" height="450" src="https://www.youtube.com/embed/PNc2S3u5XQA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div> -->
+                </div>
               </div>
             </div>
           </div>
