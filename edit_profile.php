@@ -174,7 +174,7 @@ $.get('database/getSessionData.php', function (data) {
         pledges.done(function(pledge) {
             // populate the pledges from the table
             $.each(pledge, function(index, value) {
-                if (value.status == 'False') {
+                if (value.status == 'False' || value.status == 'Incomplete') {
                     var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + '</i></a></small></small>'
                     $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td><input type="checkbox"><span> Incomplete</span></td><td>' + timeStatus + '</td></tr>')
                 } else {

@@ -93,6 +93,7 @@ function populateCommits(topic) {
                 dataType: "json"
             });
             pledges.done(function(pledge) {
+                // console.log(pledge)
                 // populate the pledges from the table
                 $.each(pledge, function(index, value) {
                     var getPledgedStatus = $.ajax({
@@ -105,7 +106,6 @@ function populateCommits(topic) {
                         },
                         dataType: "json"
                     });
-
                     if (value.status == 'False') {
                         var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + '</i></a></small></small>'
                         $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td></td><td>' + timeStatus + '</td></tr>')
@@ -115,6 +115,7 @@ function populateCommits(topic) {
                     }
                     getPledgedStatus.done(function(pledgeStatusValue) {
                         var currIndex = index + 1;
+                        console.log(pledgeStatusValue)
                         // if the current status is incomplete or true, tick the checkbox
                         if (pledgeStatusValue.status == 'True' || 'Incomplete') {
                             $('#pledgesTable tr:eq('+currIndex+') td:eq(3)').html('<input type="checkbox" checked><span> Pledged</span>');
@@ -150,7 +151,7 @@ function populateCommits(topic) {
                                 pledgeId: pledgeId,
                                 pledgeText:pledgeText,
                                 pledgeStatus: statusBool,
-                                category: 'politics'
+                                category: topic
                             },
                             dataType: "json"
                     });
