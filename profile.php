@@ -104,7 +104,7 @@ $.get('database/getSessionData.php', function (data) {
         $('#listPledges').append('<div class="panel-body"><div class="pull-left"><a href="#"><img class="media-object img-circle" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;"></a></div><h4><a href="#" style="text-decoration:none;"><strong id=usernameText>' + msg.username + '</strong></a></h4><hr><div class="post-content"><p id="completedPledges">Completed Pledges:</p><hr><p id="incompletePledges">Incomplete Pledges:</p></div></div>');
         pledges.done(function(pledge) {
             $.each(pledge, function(index, value) {
-                if (value.status == 'False') {
+                if (value.status == 'False' || value.status == 'Incomplete') {
                     console.log();
                     $('#incompletePledges').append('<ul>' + value.pledgeText + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + ' </i></a></small></small></ul>');
                 } else {

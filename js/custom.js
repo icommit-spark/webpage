@@ -111,11 +111,12 @@ function populateCommits(topic) {
                         $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td></td><td>' + timeStatus + '</td></tr>')
                     } else {
                         var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small>'
-                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td></td><td>' + timeStatus + '</td></tr>')
+                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td><input type="checkbox"><span> Pledged</span></td><td>' + timeStatus + '</td></tr>')
                     }
                     getPledgedStatus.done(function(pledgeStatusValue) {
                         var currIndex = index + 1;
-                        if (pledgeStatusValue.status == 'True') {
+                        // if the current status is incomplete or true, tick the checkbox
+                        if (pledgeStatusValue.status == 'True' || 'Incomplete') {
                             $('#pledgesTable tr:eq('+currIndex+') td:eq(3)').html('<input type="checkbox" checked><span> Pledged</span>');
                         } else {
                             $('#pledgesTable tr:eq('+currIndex+') td:eq(3)').html('<input type="checkbox"><span> Pledged</span>');
@@ -127,14 +128,14 @@ function populateCommits(topic) {
                 });
                 // create a datatable for the pledges
                 $('#pledgesTable').DataTable();
-
+                // using delegate for dynamically created content
                 $("#pledgesTable").on('click',"input[type='checkbox']", function (e) {
                     var pledgeId = $(this).closest('tr').find('td:first').text();
                     var pledgeText = $(this).closest('tr').find('td:nth-child(3)').text();
                     var pledgeStatusChange = $(this).closest('tr').find('td:nth-child(4)').find('span:first').text(' Pledged');
                     if($(this).is(":checked")) {
                         // set the status to Complete
-                        var statusBool = 'True';
+                        var statusBool = 'Incomplete';
                     } else {
                         // set the status text to Incomplete
                         var statusBool = 'False';
