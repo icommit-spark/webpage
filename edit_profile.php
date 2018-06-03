@@ -176,10 +176,10 @@ $.get('database/getSessionData.php', function (data) {
             $.each(pledge, function(index, value) {
                 if (value.status == 'False') {
                     var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + '</i></a></small></small>'
-                    $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledge + '</td><td><input type="checkbox"><span> Incomplete</span></td><td>' + timeStatus + '</td></tr>')
+                    $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td><input type="checkbox"><span> Incomplete</span></td><td>' + timeStatus + '</td></tr>')
                 } else {
                     var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small>'
-                    $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledge + '</td><td><input type="checkbox" checked><span> Complete</span></td><td>' + timeStatus + '</td></tr>')
+                    $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td><input type="checkbox" checked><span> Complete</span></td><td>' + timeStatus + '</td></tr>')
                 }
             });
             // create a datatable for the pledges

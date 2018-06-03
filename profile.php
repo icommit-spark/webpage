@@ -106,9 +106,9 @@ $.get('database/getSessionData.php', function (data) {
             $.each(pledge, function(index, value) {
                 if (value.status == 'False') {
                     console.log();
-                    $('#incompletePledges').append('<ul>' + value.pledge + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + ' </i></a></small></small></ul>');
+                    $('#incompletePledges').append('<ul>' + value.pledgeText + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + ' </i></a></small></small></ul>');
                 } else {
-                    $('#completedPledges').append('<ul>' + value.pledge + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small></ul>');
+                    $('#completedPledges').append('<ul>' + value.pledgeText + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small></ul>');
                 }
                 console.log(value.status);
             });

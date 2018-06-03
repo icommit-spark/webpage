@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iCommit</title>
-    <script src="js/vendor/jquery.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-merged.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 
   </head>
   <body>
@@ -58,19 +59,102 @@
       </section>
 
       <section class="probootstrap-section">
-          <div id="listPledges" class="panel panel-default">
-              <table id="pledgesTable" class="display" width="100%">
-                  <thead>
-                      <tr>
-                          <th>ID</th>
-                          <th>Category</th>
-                          <th>Pledge</th>
-                          <th>Status</th>
-                          <th>Time</th>
-                      </tr>
-                  </thead>
-              </table>
+        <div class="container">
+          <div id="leftRow" class="row">
+            <div class="col-md-6">
+              <div class="item">
+                <div class="probootstrap-featured-news-box">
+                    <div class="probootstrap-text">
+                        <h3><br> </h3>
+                        <p>Call state senators about issues you care about.</p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="probootstrap-featured-news-box">
+                    <div class="probootstrap-text">
+                        <h3><br> </h3>
+                        <p>Call representatives about issues you care about.</p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="item">
+                <div class="probootstrap-featured-news-box">
+                    <div class="probootstrap-text">
+                        <h3><br> </h3>
+                        <p>Participate in a protest or a rally for a cause.</p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="probootstrap-featured-news-box">
+                    <div class="probootstrap-text">
+                        <h3><br> </h3>
+                        <p>Convince people to vote for an honest and a just politician/law.</p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                    </div>
+                </div>
+              </div>
+
+            </div>
           </div>
+
+          <div id="rightRow" class="row">
+            <div class="col-md-6">
+              <div class="item">
+                <div class="probootstrap-featured-news-box">
+                    <div class="probootstrap-text">
+                        <h3><br> </h3>
+                        <p>Distribute flyers to raise awareness about society's issues.</p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="probootstrap-featured-news-box">
+                    <div class="probootstrap-text">
+                        <h3><br> </h3>
+                        <p>Participate in school/local elections and raise concerns.</p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="item">
+                <div class="probootstrap-featured-news-box">
+                    <div class="probootstrap-text">
+                        <h3><br> </h3>
+                        <p>Send a letter to a local politician and ask for tighter restrictions on carbon emissions.</p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                    </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="probootstrap-featured-news-box">
+                    <div class="probootstrap-text">
+                        <h3><br> </h3>
+                        <p>Engage in friendly conversations with people who have different opinions about issues in the society.</p>
+                        <p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </section>
 
 
@@ -229,9 +313,6 @@
     <script src="js/scripts.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/custom.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
-    <script src="js/moment.js"></script>
-    <script src="js/datatables.min.js"></script>
     <script>
         // populate the list of commits from custom.js
         populateCommits('politics');

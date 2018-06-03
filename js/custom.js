@@ -70,7 +70,7 @@ jQuery(document).ready(function() {
 
 });
 // populate commits on different pages
-function populateCommits() {
+function populateCommits(topic) {
     jQuery(document).ready(function() {
 
         "use strict";
@@ -79,12 +79,92 @@ function populateCommits() {
             cache: false
         });
         // get the session variable
-        
+
         // will use this to disable the iCommit buttons of already commited ones
-        $.get('database/getSessionData.php', function(data) {
-            $('#leftRow').append('<div id="leftRow" class="row"><div class="col-md-6"><div class="item"><div class="probootstrap-featured-news-box"><div class="probootstrap-text"><h3><br> </h3><p>Call state senators about issues you care about.</p><p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p></div></div></div><div class="item"><div class="probootstrap-featured-news-box"><div class="probootstrap-text"><h3><br> </h3><p>Call representatives about issues you care about.</p><p><a href="#" class="btn btn-primary iCommit">iCommit</a> <span class="enrolled-count">2,928 committed!</span></p></div></div></div></div>');
-            session = $.parseJSON(data);
-            console.log(session.username);
+        $.get('database/getSessionData.php', function(msg) {
+            session = $.parseJSON(msg);
+            var pledges = $.ajax({
+                url: "database/getPledges.php",
+                type: "POST",
+                data: {
+                        username: session.username,
+                        category: topic
+                    },
+                dataType: "json"
+            });
+            pledges.done(function(pledge) {
+                // populate the pledges from the table
+                $.each(pledge, function(index, value) {
+                    var getPledgedStatus = $.ajax({
+                        url: "database/getPledgedStatus.php",
+                        type: "POST",
+                        data: {
+                            username: session.username,
+                            pledgeText: value.pledgeText,
+                            category: topic
+                        },
+                        dataType: "json"
+                    });
+
+                    if (value.status == 'False') {
+                        var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + '</i></a></small></small>'
+                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td></td><td>' + timeStatus + '</td></tr>')
+                    } else {
+                        var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small>'
+                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td></td><td>' + timeStatus + '</td></tr>')
+                    }
+                    getPledgedStatus.done(function(pledgeStatusValue) {
+                        var currIndex = index + 1;
+                        if (pledgeStatusValue.status == 'True') {
+                            $('#pledgesTable tr:eq('+currIndex+') td:eq(3)').html('<input type="checkbox" checked><span> Pledged</span>');
+                        } else {
+                            $('#pledgesTable tr:eq('+currIndex+') td:eq(3)').html('<input type="checkbox"><span> Pledged</span>');
+                        }
+                    });
+                    getPledgedStatus.fail(function(jqXHR, textStatus){
+                        console.log( "Request Failed: " + textStatus);
+                    });
+                });
+                // create a datatable for the pledges
+                $('#pledgesTable').DataTable();
+
+                $("#pledgesTable").on('click',"input[type='checkbox']", function (e) {
+                    var pledgeId = $(this).closest('tr').find('td:first').text();
+                    var pledgeText = $(this).closest('tr').find('td:nth-child(3)').text();
+                    var pledgeStatusChange = $(this).closest('tr').find('td:nth-child(4)').find('span:first').text(' Pledged');
+                    if($(this).is(":checked")) {
+                        // set the status to Complete
+                        var statusBool = 'True';
+                    } else {
+                        // set the status text to Incomplete
+                        var statusBool = 'False';
+                    }
+                    // change the status of the pledge to true or false in the database
+                    // using the id of the pledge and the value of the pledge
+                    // to-do dynamically change the "Time" to the updated one
+                    var pledgeChangeAjax = $.ajax({
+                            url: "database/addToPledges.php",
+                            type: "POST",
+                            data: {
+                                pledgeId: pledgeId,
+                                pledgeText:pledgeText,
+                                pledgeStatus: statusBool,
+                                category: 'politics'
+                            },
+                            dataType: "json"
+                    });
+                    pledgeChangeAjax.done(function(change){
+                        console.log(change);
+                    });
+                    pledgeChangeAjax.fail(function(jqXHR, textStatus){
+                        console.log( "Request Failed: " + textStatus);
+                    });
+                });
+            });
+            pledges.fail(function(jqXHR, textStatus){
+                alert( "Request Failed: " + textStatus);
+            });
+            session = $.parseJSON(msg);
         });
     });
 }
