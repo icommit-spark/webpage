@@ -7,11 +7,12 @@ $username = isset($_POST['username']) ? mysqli_real_escape_string($conn, $_POST[
 $password = isset($_POST['password']) ? mysqli_real_escape_string($conn, $_POST['password']) : '';
 $email = isset($_POST['email']) ? mysqli_real_escape_string($conn, $_POST['email']) : '';
 $password = isset($_POST['password']) ? mysqli_real_escape_string($conn, $_POST['password']) : '';
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 // make the entry for the user if it doesn't exist
 
 // if the email address is empty, its for logging in
 if ($email != '') {
-    $sql = "INSERT INTO `user`(`id`, `username`, `email_address`, `password`) VALUES (0, '$username', '$email', '$password')";
+    $sql = "INSERT INTO `user`(`id`, `username`, `email_address`, `password`) VALUES (0, '$username', '$email', '$hashed_password')";
     if ($conn->query($sql) === TRUE) {
         echo $sql;
         echo "New record created successfully";
@@ -25,7 +26,7 @@ if ($email != '') {
     $result = $conn->query($sql);
     echo $sql;
     $row = $result->fetch_assoc();
-    if (count($row) == 1) {
+    if (password_verify($password, $hashed_password)) {
         $_SESSION['username'] = $username;
         $_SESSION['email_address'] = $row['email_address'];
         header('Location: ../profile.php');

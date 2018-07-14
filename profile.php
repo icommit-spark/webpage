@@ -20,6 +20,7 @@
     <script src="js/custom.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -72,6 +73,7 @@
             <div id="listPledges" class="panel panel-default">
 
             </div>
+            <div><button id="printPledges" type="button" class="btn btn-success">Print</button></div>
         </div>
     </div>
 </div>
@@ -126,4 +128,8 @@ $.get('database/getSessionData.php', function (data) {
 
 
 });
+
+$('#printPledges').on("click", function() {
+    window.print();
+})
 </script>
