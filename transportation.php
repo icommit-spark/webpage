@@ -46,9 +46,12 @@
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate">
                   <h3>Transportation</h3>
-                  <p>Public transportation provides many mobility, safety, and economic benefits to people and businesses. Beyond those key benefits, it also offers significant environmental advantages that contribute to a better quality of life.<br><br>
+                  <p>Youth don’t often think about transportation when they think about how they can help the environment.  After all, most of us don’t drive yet! But there are lots of things you can do, even before you think about driving.
 
-“Public transportation reduces the number of cars on the street, and thus helps improve air quality, alleviate traffic congestion, and noise,” says Federal Transit Administration (FTA) officials. According to the FTA, Americans take 10 billion trips on public transportation each year.</p>
+The environmental impact of transport is a huge part of impacting the environment in a negative way because transport is a major user of energy, and burns most of the world's petroleum; This creates air pollution, and is a significant contributor to global warming through emission of carbon dioxide. Road transport, such as buses and cars, is the largest contributor to global warming.
+Just because you don’t drive or take public transportation often doesn’t mean you can’t be conscious about the way you’re impacting the environment through transportation, whether you’re talking to your parents about the benefits of an electric car or biking more! Take on some of these challenges below and start saving the world one choice at a time.
+Ready to commit?
+</p>
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.jpg)">
                     <iframe width="763" height="652" src="https://www.youtube.com/embed/PNc2S3u5XQA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -68,6 +71,7 @@
                           <th>Category</th>
                           <th>Pledge</th>
                           <th>Status</th>
+                          <th>Points</th>
                           <th>Time</th>
                       </tr>
                   </thead>

@@ -45,8 +45,11 @@
             <div class="col-md-12">
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate">
-                  <h3>Politics</h3>
-                  <p>The Founders of our great nation believed that the main purpose of government was to protect people's basic rights. Almost all citizens have the right to participate in governing our nation. They may choose among many different ways of doing this. Some ways to participate are listed below. Let us strive together for a better future of our nation and our fellow countrymen.</p>
+                  <h3>Around the house</h3>
+                  <p>Think there isn’t much you can do around your house to make a difference for the planet? Think again! It is easy to go around your house without thinking about what electronics, plastic, and water do to the environment, but a little education and a few simple changes can make a big difference. You can turn off the sink while brushing your teeth, use reusable water bottles, and turn of lights when you are done with them.
+
+Did you know that the average household in the United States puts out more than twice the greenhouse gases (that lead to global warming) than the average household around the globe? For example, the U.S. used about 50 billion plastic water bottles last year. Making this many plastic bottles used more than 17 million barrels of oil annually.  And all we need to do to stop that is carry our own water bottle! There are also bigger things your family can do around the house. You can, for example, set up a compost pile to compost your food, instead of putting it in the trash.
+</p>
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.jpg)">
                     <iframe width="763" height="450" src="https://www.youtube.com/embed/PNc2S3u5XQA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

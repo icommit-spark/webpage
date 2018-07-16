@@ -72,7 +72,6 @@ jQuery(document).ready(function() {
 // populate commits on different pages
 function populateCommits(topic) {
     jQuery(document).ready(function() {
-
         "use strict";
         var session;
         $.ajaxSetup({
@@ -92,8 +91,10 @@ function populateCommits(topic) {
                     },
                 dataType: "json"
             });
+            // console.log(pledges);
             pledges.done(function(pledge) {
-                // console.log(pledge)
+                console.log(pledge);
+                // console.log('test');
                 // populate the pledges from the table
                 $.each(pledge, function(index, value) {
                     var getPledgedStatus = $.ajax({
@@ -108,10 +109,10 @@ function populateCommits(topic) {
                     });
                     if (value.status == 'False') {
                         var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + '</i></a></small></small>'
-                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td></td><td>' + timeStatus + '</td></tr>')
+                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td></td><td>' + value.points + '</td><td>' + timeStatus + '</td></tr>')
                     } else {
                         var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small>'
-                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td><input type="checkbox"><span> Pledged</span></td><td>' + timeStatus + '</td></tr>')
+                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td><input type="checkbox"><span> Pledged</span></td><td>' + value.points + '</td><td>' + timeStatus + '</td></tr>')
                     }
                     getPledgedStatus.done(function(pledgeStatusValue) {
                         var currIndex = index + 1;
@@ -124,7 +125,7 @@ function populateCommits(topic) {
                         }
                     });
                     getPledgedStatus.fail(function(jqXHR, textStatus){
-                        console.log( "Request Failed: " + textStatus);
+                        console.log( "Request Failed1: " + textStatus);
                     });
                 });
                 // create a datatable for the pledges
@@ -159,12 +160,12 @@ function populateCommits(topic) {
                         console.log(change);
                     });
                     pledgeChangeAjax.fail(function(jqXHR, textStatus){
-                        console.log( "Request Failed: " + textStatus);
+                        console.log( "Request Failed2: " + textStatus);
                     });
                 });
             });
             pledges.fail(function(jqXHR, textStatus){
-                alert( "Request Failed: " + textStatus);
+                console.log( "Request Failed3: " + textStatus);
             });
             session = $.parseJSON(msg);
         });

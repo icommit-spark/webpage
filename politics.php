@@ -46,7 +46,13 @@
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate">
                   <h3>Politics</h3>
-                  <p>The Founders of our great nation believed that the main purpose of government was to protect people's basic rights. Almost all citizens have the right to participate in governing our nation. They may choose among many different ways of doing this. Some ways to participate are listed below. Let us strive together for a better future of our nation and our fellow countrymen.</p>
+                  <p>The environmental movement’s challenge isn’t energy, it’s power. Power is what prompts political change, and youth have lots of power! We are too young to run for office, but we can exercise our political power to get politicians to act.
+In the past, environmentalists lacked the power necessary to effect major change because there were only a few environmental champions in positions of power. But today, there is a movement of young people who care about the planet and who know how to use their political power to change things. .
+
+You don’t have to sponsor new legislation (although that would be great) or plan a thousand person march (also cool).  Research shows that something as small as making a phone call can make a big difference. Take on these challenges - big and small - to use your political power to change the world.
+
+Ready to commit?
+</p>
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.jpg)">
                     <iframe width="763" height="450" src="https://www.youtube.com/embed/PNc2S3u5XQA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -66,6 +72,7 @@
                           <th>Category</th>
                           <th>Pledge</th>
                           <th>Status</th>
+                          <th>Points</th>
                           <th>Time</th>
                       </tr>
                   </thead>

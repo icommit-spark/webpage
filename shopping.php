@@ -47,8 +47,13 @@
             <div class="col-md-12">
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate">
-                  <h3>Politics</h3>
-                  <p>The Founders of our great nation believed that the main purpose of government was to protect people's basic rights. Almost all citizens have the right to participate in governing our nation. They may choose among many different ways of doing this. Some ways to participate are listed below. Let us strive together for a better future of our nation and our fellow countrymen.</p>
+                  <h3>Shopping</h3>
+                  <p>It’s tough to appreciate all that we have - our homes, clothes,  toys, technology, or other belongings - when we are faced with tempting NEW STUFF every day. Stores, the internet, TV, and our friends convince us that we need more stuff, better stuff, new stuff!  But unwisely shopping - for things you don’t need or things that were not made in an environmentally-friendly way - does bad things to this planet we love.
+Take clothes, for instance. Fast fashion focuses on speed and low cost in order to deliver frequent new collections inspired by celebrity styles. But it is particularly bad for the environment as pressure to reduce cost and the time it takes to get a product from design to shop floor means that environmental corners are more likely to be cut. Criticisms of fast fashion include its negative environmental impact, water pollution, the use of toxic chemicals and increasing levels of textile waste.
+Textile dyeing is the second largest polluter of clean water globally, after agriculture. Many of the chemicals used in the production of clothing are banned or strictly regulated in various countries because they are toxic, bio-accumulative (meaning the substance builds up in an organism faster than the organism can excrete or metabolise it), disruptive to hormones and carcinogenic.
+So think twice before you buy that new t-shirt or phone. Your shopping dollars are powerful.  And how you use them affects what products get made and how they get made.  Take on some of these challenges and use your money to change the world!
+Ready to commit?
+</p>
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.jpg)">
                     <iframe width="763" height="450" src="https://www.youtube.com/embed/PNc2S3u5XQA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

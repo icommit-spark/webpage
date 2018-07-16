@@ -33,7 +33,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-left section-heading probootstrap-animate">
-              <h1>Making a Difference</h1>
+              <h1>Food Challenges</h1>
             </div>
           </div>
         </div>
@@ -45,8 +45,14 @@
             <div class="col-md-12">
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate">
-                  <h3>Politics</h3>
-                  <p>The Founders of our great nation believed that the main purpose of government was to protect people's basic rights. Almost all citizens have the right to participate in governing our nation. They may choose among many different ways of doing this. Some ways to participate are listed below. Let us strive together for a better future of our nation and our fellow countrymen.</p>
+                  <h3>Food</h3>
+                  <p>It’s easy to overlook the environmental impacts of our food because they are spread across all stages of a long process. From farm to fork, food production, processing, and transportation can accumulate enormous amounts of energy, water, and chemicals.
+
+Food that comes from high on the food chain or arrives to your plate after extensive processing tends to require more energy and release more global warming pollution into the air. The “carbon footprint” of hamburger, for example, includes all of the fossil fuels that that went into producing the fertilizer and pumping the irrigation water to grow the corn that fed the cow, and may also include emissions that result from converting forest land to grazing land. Meat from ruminant animals (cows, goats, and sheep) has a particularly large carbon footprint because of the methane (a potent global warming gas) released from the animals’ digestion and manure. It is estimated that if all Americans eliminated just one quarter pound serving of beef per week, the reduction in global warming gas emissions would be equivalent to taking four to six million cars off the road.
+
+Take on some of the challenges below and start saving the planet one meal at a time!
+
+Ready to commit?</p>
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.jpg)">
                     <iframe width="763" height="450" src="https://www.youtube.com/embed/PNc2S3u5XQA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -81,7 +87,7 @@
         <div class="container">
           <div class="row">
             <div style="margin-top: 0px" class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Meet Our Top Political Contributors</h2>
+              <h2>Meet Our Top Food Committers</h2>
               <p class="lead">Get a chance to be featured here as one of the top contributors by committing to above tasks!</p>
             </div>
           </div>

@@ -52,7 +52,7 @@
                 <div class="col-md-8 col-md-offset-2">
 
                  <div class="probootstrap-slider-text text-center">
-                    <h1 class="probootstrap-heading probootstrap-animate">Giving Back to the Society</h1>
+                    <h1 class="probootstrap-heading probootstrap-animate">Changing the Yourself. Changing the Planet.</h1>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate">
                   <h3>About iCommit</h3>
-                  <p>At iCommit, we value the Mother Earth and contribute to a Greener Future for the generations to come. Help us in our mission to improving our lifestyles for the greater good of mankind and motivate others around you. #GoGreen!</p>
+                  <p>At iCommit, we value the Earth and strive to contribute to a thriving environment for the generations to come. As young adults, we believe that you need to play a role in protecting the planet. Help us in our mission aimed at youth that is encouraging them to commit to everyday challenges that would impact the environment. These challenges include things such as cutting back on meat, taking public transit and taking part in rallies and protests. You’ll save the Earth and gain points and badges while you’re at it!</p>
                   <p><a href="#" class="btn btn-primary">Sign Up</a></p>
                 </div>
                 <div class="probootstrap-image probootstrap-animate" style="background-image: url(img/slider_3.jpg)">
@@ -638,8 +638,8 @@
           <div class="row">
             <div class="col-md-4">
               <div class="probootstrap-footer-widget">
-                <h3>About iCommit</h3>
-                <p>At iCommit, we value the Mother Earth and contribute to a Greener Future for the generations to come. Help us in our mission to improving our lifestyles for the greater good of mankind and motivate others around you. #GoGreen!</p>
+                <h3>Who we are</h3>
+                <p>We're a homeschool activism class. Over the years, we’ve led rallies, raised money for the no-DAPL movement, led a poster campaign to welcome immigrants, and more.  We realized, though, that to create real change we needed to start a movement of youth making changes big and small.</p>
                 <h3>Social</h3>
                 <ul class="probootstrap-footer-social">
                   <li><a href="#"><i class="icon-twitter"></i></a></li>
