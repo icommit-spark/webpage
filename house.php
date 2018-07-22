@@ -69,6 +69,7 @@ Did you know that the average household in the United States puts out more than 
                           <th>Category</th>
                           <th>Pledge</th>
                           <th>Status</th>
+                          <th>Points</th>
                           <th>Time</th>
                       </tr>
                   </thead>

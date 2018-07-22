@@ -8,9 +8,9 @@ $status = isset($_POST['status']) ? mysqli_real_escape_string($conn, $_POST['sta
 
 $sql = "UPDATE `pledges` SET `status`='$status', `completion_date`=now() WHERE `username`='$username' and `id`='$pledgeId'";
 if ($conn->query($sql) === TRUE) {
-    echo json_encode($status);
+    echo ($status);
 }
 else {
     echo "Error: " . $sql . "<br>" . $conn->error;
-    echo json_encode($sql);
+    echo ($sql);
 }

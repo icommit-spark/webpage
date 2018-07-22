@@ -94,7 +94,6 @@ function populateCommits(topic) {
             // console.log(pledges);
             pledges.done(function(pledge) {
                 console.log(pledge);
-                // console.log('test');
                 // populate the pledges from the table
                 $.each(pledge, function(index, value) {
                     var getPledgedStatus = $.ajax({
@@ -135,6 +134,7 @@ function populateCommits(topic) {
                     var pledgeId = $(this).closest('tr').find('td:first').text();
                     var pledgeText = $(this).closest('tr').find('td:nth-child(3)').text();
                     var pledgeStatusChange = $(this).closest('tr').find('td:nth-child(4)').find('span:first').text(' Pledged');
+                    var pledgeScore = $(this).closest('tr').find('td:nth-child(5)').text();
                     if($(this).is(":checked")) {
                         // set the status to Complete
                         var statusBool = 'Incomplete';
@@ -152,6 +152,7 @@ function populateCommits(topic) {
                                 pledgeId: pledgeId,
                                 pledgeText:pledgeText,
                                 pledgeStatus: statusBool,
+                                pledgeScore: pledgeScore,
                                 category: topic
                             },
                             dataType: "json"

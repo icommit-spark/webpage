@@ -81,6 +81,7 @@
 <script>
 // ajax call to get the session data
 var session;
+var totalPledgeScore = 0;
 $.ajaxSetup({cache: false})
 // get the session variable
 $.get('database/getSessionData.php', function (data) {
@@ -103,30 +104,39 @@ $.get('database/getSessionData.php', function (data) {
             data: {username: msg.username},
             dataType: "json"
         });
-        $('#listPledges').append('<div class="panel-body"><div class="pull-left"><a href="#"><img class="media-object img-circle" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;"></a></div><h4><a href="#" style="text-decoration:none;"><strong id=usernameText>' + msg.username + '</strong></a></h4><hr><div class="post-content"><p id="completedPledges">Completed Pledges:</p><hr><p id="incompletePledges">Incomplete Pledges:</p></div></div>');
+        $('#listPledges').append('<div class="panel-body"><div class="pull-left"><a href="#"><img class="media-object img-circle" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="50px" height="50px" style="margin-right:8px; margin-top:-5px;"></a></div><h4><a href="#" style="text-decoration:none;"><strong id=usernameText2>' + msg.username + '</strong></a></h4><hr><div class="post-content"><p id="completedPledges">Completed Pledges:</p><hr><p id="incompletePledges">Incomplete Pledges:</p></div></div>');
         pledges.done(function(pledge) {
             $.each(pledge, function(index, value) {
                 if (value.status == 'False' || value.status == 'Incomplete') {
-                    console.log();
                     $('#incompletePledges').append('<ul>' + value.pledgeText + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + ' </i></a></small></small></ul>');
                 } else {
-                    $('#completedPledges').append('<ul>' + value.pledgeText + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small></ul>');
+                    console.log('check')
+                    console.log(value.pledgeScore != null);
+                    if (value.pledgeScore !== null && value.pledgeScore) {
+                        console.log(value.pledgeScore)
+                        totalPledgeScore += parseInt(value.pledgeScore)
+                    }
+                    $('#completedPledges').append('<ul>' + value.pledgeText + ' – <small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small> - <b>' + value.pledgeScore + ' points </b> </ul>');
+                    // if (value.pledgeScore != null && value.pledgeScore != 'undefined') {
+                    //     totalPledgeScore = value.pledgeScore;
+                    // }
+
+
                 }
-                console.log(value.status);
             });
+            $('#usernameText2').append('<p> Total Score = ' + totalPledgeScore + '</p>');
+
         });
         pledges.fail(function(jqXHR, textStatus){
             alert( "Request Failed: " + textStatus);
         });
-
+        
 
         // console.log(msg);
     });
     request.fail(function(jqXHR, textStatus) {
       alert( "Request failed: " + textStatus );
     });
-
-
 });
 
 $('#printPledges').on("click", function() {

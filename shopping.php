@@ -73,6 +73,7 @@ Ready to commit?
                           <th>Category</th>
                           <th>Pledge</th>
                           <th>Status</th>
+                          <th>Points</th>
                           <th>Time</th>
                       </tr>
                   </thead>
