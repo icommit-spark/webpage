@@ -100,25 +100,24 @@ Ready to commit?
               $result2 = $conn->query($sql2);
               $row2 = $result2->fetch_assoc();
           ?>
-
-          <div class="row">
-            <div class="col-md-3 col-sm-6">
-              <div class="probootstrap-teacher text-center probootstrap-animate">
-                <figure class="media">
-                  <img src="img/person_4.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
-                </figure>
-                <div class="text">
-                  <h3><?php echo $row['username'];?></h3>
-                  <p><?php echo $row2['location'];?></p>
-                  <ul class="probootstrap-footer-social">
-                    <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                  </ul>
+              <div class="row">
+                <div class="col-md-3 col-sm-6">
+                  <div class="probootstrap-teacher text-center probootstrap-animate">
+                    <figure class="media">
+                      <img src="img/person_4.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
+                    </figure>
+                    <div class="text">
+                      <h3><?php echo $row["username"];?></h3>
+                      <p><?php echo $row2["location"];?></p>
+                      <ul class="probootstrap-footer-social">
+                        <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
+                        <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <?php
+                <?php
             }
               $conn->close();
              ?>

@@ -82,78 +82,43 @@ Did you know that the average household in the United States puts out more than 
         <div class="container">
           <div class="row">
             <div style="margin-top: 0px" class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
-              <h2>Meet Our Top Political Contributors</h2>
+              <h2>Meet Our Top Household Contributors</h2>
               <p class="lead">Get a chance to be featured here as one of the top contributors by committing to above tasks!</p>
             </div>
           </div>
           <!-- END row -->
 
-          <div class="row">
-            <div class="col-md-3 col-sm-6">
-              <div class="probootstrap-teacher text-center probootstrap-animate">
-                <figure class="media">
-                  <img src="img/person_4.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
-                </figure>
-                <div class="text">
-                  <h3>Joey</h3>
-                  <p>Boston, MA</p>
-                  <ul class="probootstrap-footer-social">
-                    <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                  </ul>
+          <?php
+          include 'database/config.php';
+          $sql = "SELECT `username`, count(*) FROM `pledges` WHERE `username` IS NOT NULL and `category`='house' GROUP BY `username` ORDER BY count(*) DESC LIMIT 4";
+          $result = $conn->query($sql);
+          while($row = $result->fetch_assoc()) {
+              $userVal = $row['username'];
+              $sql2 = "SELECT `location` FROM `user` WHERE `username` = '$userVal'";
+              $result2 = $conn->query($sql2);
+              $row2 = $result2->fetch_assoc();
+          ?>
+              <div class="row">
+                <div class="col-md-3 col-sm-6">
+                  <div class="probootstrap-teacher text-center probootstrap-animate">
+                    <figure class="media">
+                      <img src="img/person_4.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
+                    </figure>
+                    <div class="text">
+                      <h3><?php echo $row["username"];?></h3>
+                      <p><?php echo $row2["location"];?></p>
+                      <ul class="probootstrap-footer-social">
+                        <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
+                        <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="probootstrap-teacher text-center probootstrap-animate">
-                <figure class="media">
-                  <img src="img/person_5.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
-                </figure>
-                <div class="text">
-                  <h3>Chandler</h3>
-                  <p>Chicago, IL</p>
-                  <ul class="probootstrap-footer-social">
-                    <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="clearfix visible-sm-block visible-xs-block"></div>
-            <div class="col-md-3 col-sm-6">
-              <div class="probootstrap-teacher text-center probootstrap-animate">
-                <figure class="media">
-                  <img src="img/person_6.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
-                </figure>
-                <div class="text">
-                  <h3>Phoebe</h3>
-                  <p>Los Angeles, CA</p>
-                  <ul class="probootstrap-footer-social">
-                    <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="probootstrap-teacher text-center probootstrap-animate">
-                <figure class="media">
-                  <img src="img/person_7.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
-                </figure>
-                <div class="text">
-                  <h3>Jessica</h3>
-                  <p>Seattle, WA</p>
-                  <ul class="probootstrap-footer-social">
-                    <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li class="facebook"><a href="#"><i class="icon-facebook2"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="icon-instagram2"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+                <?php
+            }
+              $conn->close();
+             ?>
           </div>
         </div>
       </section>

@@ -106,6 +106,7 @@ function populateCommits(topic) {
                         },
                         dataType: "json"
                     });
+                    
                     if (value.status == 'False') {
                         var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + '</i></a></small></small>'
                         $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td></td><td>' + value.points + '</td><td>' + timeStatus + '</td></tr>')
