@@ -203,6 +203,7 @@ Ready to commit?
     <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
     <script src="js/moment.js"></script>
     <script src="js/datatables.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
     <script>
         // populate the list of commits from custom.js
         populateCommits('politics');

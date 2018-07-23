@@ -70,6 +70,7 @@ jQuery(document).ready(function() {
 
 });
 // populate commits on different pages
+
 function populateCommits(topic) {
     jQuery(document).ready(function() {
         "use strict";
@@ -93,7 +94,6 @@ function populateCommits(topic) {
             });
             // console.log(pledges);
             pledges.done(function(pledge) {
-                console.log(pledge);
                 // populate the pledges from the table
                 $.each(pledge, function(index, value) {
                     var getPledgedStatus = $.ajax({
@@ -106,13 +106,22 @@ function populateCommits(topic) {
                         },
                         dataType: "json"
                     });
-                    
+                    var blurbVal = ''
+                    var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+                    if(expression.test(value.blurb)) {
+                        blurbVal = '<td> <a href="'+value.blurb + '">' + value.pledgeText + '<a/></td>'
+                    } else if (value.blurb == null) {
+                        blurbVal = '<td title = "' + value.pledgeText + '">' + value.pledgeText + '</td>';
+                    } else {
+                        blurbVal = '<td title = "' + value.blurb + '">' + value.pledgeText + '</td>';
+                    }
+                    console.log(blurbVal, value.blurb)
                     if (value.status == 'False') {
                         var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.creation_date).fromNow() + '</i></a></small></small>'
                         $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td></td><td>' + value.points + '</td><td>' + timeStatus + '</td></tr>')
                     } else {
                         var timeStatus = '<small><small><a href="#" style="text-decoration:none; color:grey;"><i><i class="fa fa-clock-o" aria-hidden="true"></i> ' + moment(value.completion_date).fromNow() + '</i></a></small></small>'
-                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td><td>' + value.pledgeText + '</td><td><input type="checkbox"><span> Pledged</span></td><td>' + value.points + '</td><td>' + timeStatus + '</td></tr>')
+                        $('#pledgesTable').append('<tr><td>' + value.id + '</td><td>' + value.category + '</td>' + blurbVal + '<td><input type="checkbox"><span> Pledged</span></td><td>' + value.points + '</td><td>' + timeStatus + '</td></tr>')
                     }
                     getPledgedStatus.done(function(pledgeStatusValue) {
                         var currIndex = index + 1;
